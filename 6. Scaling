@@ -1,0 +1,7 @@
+# Import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler
+
+# Instantiate MinMaxScaler and use it to rescale X_train and X_test
+scaler = MinMaxScaler(feature_range=(0, 1))
+rescaledX_train = scaler.fit_transform(X_train)
+rescaledX_test = scaler.transform(X_test)
