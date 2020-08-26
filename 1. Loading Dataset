@@ -1,4 +1,4 @@
-Credit Card Approval Dataset: http://archive.ics.uci.edu/ml/datasets/credit+approval
+Credit Card Approval Dataset Used: http://archive.ics.uci.edu/ml/datasets/credit+approval
 
 # Import pandas
 import pandas as pd
