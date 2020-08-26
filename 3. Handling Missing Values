@@ -66,7 +66,7 @@ OUTPUT:
 dtype: int64
 '''
 
-# Iterate over each column of cc_apps (This is for non-numeric columns)
+# Iterate over each column of cc_apps (This is for non-numeric columns i.e. 0, 1, 13)
 for col in cc_apps.columns:
     # Check if the column is of object type
     if cc_apps[col].dtypes == 'object':
