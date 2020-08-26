@@ -9,3 +9,10 @@ print("Accuracy of logistic regression classifier: ", logreg.score(rescaledX_tes
 
 # Print the confusion matrix of the logreg model
 print(confusion_matrix(y_test,y_pred))
+
+'''
+OUTPUT:
+Accuracy of logistic regression classifier:  0.8377192982456141
+array([[92, 11],
+       [26, 99]])
+'''
