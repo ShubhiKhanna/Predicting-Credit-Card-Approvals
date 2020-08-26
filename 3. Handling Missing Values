@@ -39,7 +39,7 @@ OUTPUT:
 689    b  35.00   3.375  u  g   c   h  8.290  f  f   0  t  g  00000    0  -
 '''
 
-# Impute the missing values with mean imputation
+# Impute the missing values with mean imputation (This is for numeric values)
 cc_apps.fillna(cc_apps.mean(), inplace=True)
 
 # Count the number of NaNs in the dataset to verify
@@ -63,5 +63,37 @@ OUTPUT:
 13    13
 14     0
 15     0
+dtype: int64
+'''
+
+# Iterate over each column of cc_apps (This is for non-numeric columns)
+for col in cc_apps.columns:
+    # Check if the column is of object type
+    if cc_apps[col].dtypes == 'object':
+        # Impute with the most frequent value
+        cc_apps = cc_apps.fillna(cc_apps[col].value_counts().index[0])
+
+
+# Count the number of NaNs in the dataset and print the counts to verify
+print(cc_apps.isnull().sum())
+
+'''
+OUTPUT:
+0     0
+1     0
+2     0
+3     0
+4     0
+5     0
+6     0
+7     0
+8     0
+9     0
+10    0
+11    0
+12    0
+13    0
+14    0
+15    0
 dtype: int64
 '''
